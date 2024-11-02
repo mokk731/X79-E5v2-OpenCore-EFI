@@ -33,7 +33,9 @@ bios ： AMI uEFI
 
 2, 增加了RTL8111网卡驱动，  
 
-3, 改动Realtek ALC声卡驱动,alcid=1,id要自己试，改动。
+3, 增加了Realtek ALC声卡驱动,alcid=1,ALC887 id要自己试，改动。
+                        
+    0x100202, 0x100302, layout 1, 2, 3, 5, 7, 11, 13, 17, 18, 20, 33, 40, 50, 52, 53, 87, 99
 
 4, uefi-drivers-OpenUsbKbDxe.efi 改成false  。
 
