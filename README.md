@@ -23,6 +23,8 @@ SSD ：  120G sata ssd
 
 bios ： AMI uEFI
 
+------------------------------------------------------------------------------------------
+
 
 本项目在 [DmitriyyyyS/Asus-H67](https://github.com/DmitriyyyyS/Asus-H67) 基础上，优化改动。感谢DmitriyyyyS的无私分享。
 
@@ -36,6 +38,8 @@ bios ： AMI uEFI
 4, uefi-drivers-OpenUsbKbDxe.efi 改成false  。
 
 5, 不管BIOS的 CFG Lock 是否已解锁， 都可以正常引导。
+
+------------------------------------------------------------------------------------------
 
 
 [3代老主机安装黑苹果catalina 10.15.7的思路](https://www.bilibili.com/read/cv13039059)
