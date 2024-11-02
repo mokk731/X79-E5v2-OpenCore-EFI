@@ -27,3 +27,12 @@ bios ： AMI uEFI
 本项目在 [DmitriyyyyS/Asus-H67](https://github.com/DmitriyyyyS/Asus-H67) 基础上，优化改动。感谢DmitriyyyyS的无私分享。
 
 
+1, 基于OpenCore  0.7.7
+
+2, 增加了RTL8111网卡驱动，  
+
+3, 改动Realtek ALC声卡驱动,alcid=1,id要自己试，改动。
+
+4, uefi-drivers-OpenUsbKbDxe.efi 改成false  。
+
+5, 不管BIOS的 CFG Lock 是否已解锁， 都可以正常引导。
