@@ -10,9 +10,9 @@ CPU : E5-2650 V2
 
 主板 ：X79-H67  山寨板 
 
-内存 ： DDR3 1333 8G*2
+内存 ： DDR3 ECC 1333 8G*2
 
-显卡 ： GTX650 1G  免驱动
+显卡 ： GTX650 1G  GK107-450 免驱动
 
 声卡 ： Realtek ALC887
 
@@ -24,3 +24,5 @@ bios ： AMI uEFI
 
 
 本项目在 [DmitriyyyyS/Asus-H67](https://github.com/DmitriyyyyS/Asus-H67) 基础上，优化改动。感谢DmitriyyyyS的无私分享。
+
+
