@@ -1,14 +1,15 @@
 # X79-H67-E5v2-OpenCore-EFI
 X79-H67-E5v2-OpenCore-EFI,Hackintosh
+
 OpenCore_0.7.7
 
 
 
 ## 我的硬件表：
 
-CPU : E5-2650 V2
+CPU :  E5-2650 V2
 
-主板 ：X79-H67  山寨板 
+主板 ： X79-H67  山寨板 
 
 内存 ： DDR3 ECC 1333 8G*2
 
@@ -18,7 +19,7 @@ CPU : E5-2650 V2
 
 网卡 ： RTL8111
 
-SSD ： 120G sata ssd
+SSD ：  120G sata ssd
 
 bios ： AMI uEFI
 
