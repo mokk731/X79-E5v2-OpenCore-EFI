@@ -36,3 +36,9 @@ bios ： AMI uEFI
 4, uefi-drivers-OpenUsbKbDxe.efi 改成false  。
 
 5, 不管BIOS的 CFG Lock 是否已解锁， 都可以正常引导。
+
+
+[3代老主机安装黑苹果catalina 10.15.7的思路](https://www.bilibili.com/read/cv13039059)
+
+选择catalina版本是因为苹果官方并不支持3代安装big sur，虽然黑苹果没有这个限制，可以改smbios机型安装big sur，但其实3代真不适合big sur，catalina也非常够用了 。
+
