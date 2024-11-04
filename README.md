@@ -62,3 +62,9 @@ bios ： AMI uEFI
 
     机型可以选imacpro1,1，我这边选的是imac15,1，相差并不大。 
 
+------------------------------------------------------------------------------------------
+
+出现跑码：   OC: Grabbed zero system-id for SB, this is not allowed
+
+处理：   设置Misc--Security--SecureBootModel--Disabled
+
