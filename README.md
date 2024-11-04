@@ -70,5 +70,6 @@ bios ： AMI uEFI
 
 
 出现跑码：  Panic diags file unavailable, panic occurred prior to initialization
+
 处理：     尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
 
