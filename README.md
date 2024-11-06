@@ -84,7 +84,7 @@ bios ： AMI uEFI
 本项目在 [nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2](https://github.com/nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2) 基础上，优化改动,但进不了菜单，OC版本不兼容，只能用原版。感谢nguyenphucdev的无私分享。
 
 
-1, 基于OpenCore  0.6.1
+1, 基于OpenCore  0.6.1     ， xeon W-3245M  macpro7.1
 
 2, 能成功安装macos,但重启后，不能进入masos, Misc--Security--SecureBootModel 原定 j160- 10.15.1 (19B88)  ，要安装的是10.15.7，， 想改Disabled，但OC版本不兼容，只能用原版。
 
