@@ -69,7 +69,25 @@ bios ： AMI uEFI
 处理：      设置Misc--Security--SecureBootModel--Disabled
 
 
+
 出现跑码：  Panic diags file unavailable, panic occurred prior to initialization
 
 处理：     尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
+
+
+------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+
+本项目在 [nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2](https://github.com/nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2) 基础上，优化改动,但进不了菜单，OC版本不兼容，只能用原版。感谢nguyenphucdev的无私分享。
+
+
+1, 基于OpenCore  0.6.1
+
+2, 能成功安装macos,但重启后，不能进入masos, Misc--Security--SecureBootModel 原定 j160- 10.15.1 (19B88)  ，要安装的是10.15.7，， 想改Disabled，但OC版本不兼容，只能用原版。
+
+3， https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
+    Ivy Bridge 3XXX
+    SDT-IMEI（6系主板才需要，例如H61主板、H67主板、P67主板、Z68主板）
+
 
