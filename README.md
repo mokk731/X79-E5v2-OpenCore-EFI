@@ -89,7 +89,8 @@ bios ： AMI uEFI
 1, 基于OpenCore  0.6.1     ， xeon W-3245M  macpro7.1   ，202012
 
 2, 能成功安装macos,但重启后，不能进入macos, Misc--Security--SecureBootModel 原定 j160- 10.15.1 (19B88)  ，要安装的是10.15.7，， 想改Disabled，但OC版本不兼容，只能用原版。
-有时重启后，能进入macos
+
+   用Hackintool瞎搞一通，有时重启后，能进入macos
 
 3， https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
     Ivy Bridge 3XXX
