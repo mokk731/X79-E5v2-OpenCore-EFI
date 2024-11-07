@@ -1,13 +1,11 @@
 # X79-H67-E5v2-OpenCore-EFI
 X79-H67-E5v2-OpenCore-EFI,Hackintosh
 
-OpenCore_0.7.7
-
 
 
 ## 我的硬件表：
 
-CPU :  E5-2650 V2
+CPU :  E5-2650 V2 . 3代ivy brige
 
 主板 ： X79-H67  山寨板 
 
@@ -19,7 +17,7 @@ CPU :  E5-2650 V2
 
 网卡 ： RTL8111
 
-SSD ：  120G sata ssd
+SSD ：  tigo 120G sata ssd
 
 bios ： AMI uEFI
 
@@ -88,7 +86,7 @@ bios ： AMI uEFI
 
 1, 基于OpenCore  0.6.1     ， xeon W-3245M  macpro7.1   ，202012
 
-2, 能成功安装macos,但重启后，不能进入macos, Misc--Security--SecureBootModel 原定 j160- 10.15.1 (19B88)  ，要安装的是10.15.7，， 想改Disabled，但OC版本不兼容，只能用原版。
+2, 能成功安装macos,但重启后，不能进入macos 自动重启, Misc--Security--SecureBootModel 原定 j160- 10.15.1 (19B88)  ，要安装的是10.15.7，， 想改Disabled，但OC版本不兼容，只能用原版。
 
    用Hackintool瞎搞一通，有时重启后，能进入macos
 
