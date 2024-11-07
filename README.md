@@ -23,6 +23,8 @@ SSD ：  120G sata ssd
 
 bios ： AMI uEFI
 
+![macos202411](https://github.com/mokk731/X79-E5v2-OpenCore-EFI/blob/main/mac202411.jpg)
+
 ------------------------------------------------------------------------------------------
 
 
