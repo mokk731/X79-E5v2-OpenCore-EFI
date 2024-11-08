@@ -95,4 +95,18 @@ bios ： AMI uEFI
     Ivy Bridge 3XXX
     SDT-IMEI（6系主板才需要，例如H61主板、H67主板、P67主板、Z68主板）
 
+------------------------------------------------------------------------------------------
+
+优化改动目标：
+
+https://github.com/AwSomeSiz/Atermiter_X79G_Hackintosh   OpenCore 0.8.0     X79G and Xeon E5-1650 v2   RX 570 4GB    用OpenCore 0.8.8，打开有错误
+
+https://github.com/antipeth/EFI-Motherboard-X79-OpenCore-Hackintosh      OpenCore 0.7.7   huanan-x79  E5-2450v2   HD 7750 1G  用OpenCore 0.8.8，打开没错误
+
+
+
+
+
+   
+
 
