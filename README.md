@@ -43,7 +43,7 @@ bios ： AMI uEFI
 
 6,  MLB，SystemSerialNumber，SystemUUID 三码是原作者的，要重新改.
 
-7， 多次试安装masos,但不成功。可能少了SDT-IMEI
+7， 能进入安装菜单，但多次试安装masos,不成功。可能少了SDT-IMEI，，，，
 
 ------------------------------------------------------------------------------------------
 
@@ -104,7 +104,7 @@ https://github.com/AwSomeSiz/Atermiter_X79G_Hackintosh   OpenCore 0.8.0  ,    X7
 https://github.com/antipeth/EFI-Motherboard-X79-OpenCore-Hackintosh   ,   OpenCore 0.7.7   huanan-x79  E5-2450v2   HD 7750 1G  ,  用OpenCore 0.8.8，打开没错误, #####
 
 
-
+https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ,用OpenCore 0.8.8，打开有错误, 改了可以通过， 能进入安装菜单，但多次试安装masos,不成功。可能少了SDT-IMEI
 
 
    
