@@ -110,6 +110,20 @@ https://github.com/antipeth/EFI-Motherboard-X79-OpenCore-Hackintosh   ,   OpenCo
 https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeon 3270  GT 710 (Kepler)   ,用OpenCore 0.8.8，打开有错误, 改了可以通过， 能进入安装菜单，但多次试安装masos,不成功。可能少了SDT-IMEI
 
 
-   
+------------------------------------------------------------------------------------------
 
+
+https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
+
+https://www.yuque.com/hejianzhao/zgnsc5/gnr881#
+
+https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
+   
+https://dortania.github.io/OpenCore-Install-Guide/config.plist/ivy-bridge.html#acpi
+
+    SSDT-PM
+    SSDT-EC
+    SSDT-IMEI
+
+    
 
