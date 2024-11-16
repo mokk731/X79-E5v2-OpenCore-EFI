@@ -131,17 +131,16 @@ DeviceProperties
 Add
 
 PciRoot(0x0)/Pci(0x2,0x0) 类型：Dictionary
-
 AAPL,ig-platform-id 类型：Data
 0A006601 这是台式机HD 4000的示例
-PciRoot(0x0)/Pci(0x16,0x0)
 
+PciRoot(0x0)/Pci(0x16,0x0)
 如果要将Ivy Bridge CPU与6系列主板（即H61，B65，Q65，P67，H67，Q67，Z68）配对，则需要这样做，特别是为了欺骗您的IMEI设备。请注意，此属性是无论是否使用SSDT-IMEI，仍然需要。
 device-id 类型：Datar
 3A1E0000
 注意：如果您使用的是7系列主板（例如B75，Q75，Z75，H77，Q77，Z77），则不需要这样做
-PciRoot(0x0)/Pci(0x1b,0x0) 类型：Dictionary
 
+PciRoot(0x0)/Pci(0x1b,0x0) 类型：Dictionary
 可以立即删除此属性
 在NVRAM——Add——7C436110-AB2A-4BBB-A880-FE41995C9F82——boot-args增加alcid=xxx参数，将覆盖存在的所有其他布局ID，请查看这里并确定您的声卡型号，然后找到对应的参数。https://github.com/acidanthera/AppleALC/wiki/Supported-codecs
 例如，声卡ALC892，alcid=xxx参数，可以设置为alcid=1参数
