@@ -48,38 +48,6 @@ bios ： AMI uEFI
 ------------------------------------------------------------------------------------------
 
 
-[3代老主机安装黑苹果catalina 10.15.7的思路](https://www.bilibili.com/read/cv13039059)
-
-    选择catalina版本是因为苹果官方并不支持3代安装big sur，虽然黑苹果没有这个限制，可以改smbios机型安装big sur，但其实3代真不适合big sur，catalina也非常够用了 。
-
-    由于是3代ivy brige架构搭配6系芯片组，需要在apci里添加SSDT-IMEI.aml，否则可能会出现错误。如果是7系芯片组则不需要。
-
-    配置核显加速的AAPL,ig-platform-id为07002601，因为核显并不输出图像，所以只作为运算加速。
-
-    h61有些主板用的是比较冷门的sata控制器，所以SATA-unsupported.kext最好加上，
-
-    关于usb的驱动，其实一个USBInjectAll.kext就搞掂了。
-
-    另外，因为是免驱的nv显卡，引导参数记得加上nvda_drv_vrl=1，
-
-    机型可以选imacpro1,1，我这边选的是imac15,1，相差并不大。 
-
-------------------------------------------------------------------------------------------
-
-出现跑码：   OC: Grabbed zero system-id for SB, this is not allowed
-
-处理：      设置Misc--Security--SecureBootModel--Disabled
-
-
-
-出现跑码：  Panic diags file unavailable, panic occurred prior to initialization
-
-处理：     尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
-
-
-------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------
 
 本项目在 [nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2](https://github.com/nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2) 基础上，优化改动,但进不了菜单，OC版本不兼容，只能用原版。感谢nguyenphucdev的无私分享。
 
@@ -114,6 +82,39 @@ https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeo
 ------------------------------------------------------------------------------------------
 
 
+
+
+
+出现跑码：   OC: Grabbed zero system-id for SB, this is not allowed
+
+处理：      设置Misc--Security--SecureBootModel--Disabled
+
+
+
+出现跑码：  Panic diags file unavailable, panic occurred prior to initialization
+
+处理：     尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
+
+
+------------------------------------------------------------------------------------------
+
+[3代老主机安装黑苹果catalina 10.15.7的思路](https://www.bilibili.com/read/cv13039059)
+
+    选择catalina版本是因为苹果官方并不支持3代安装big sur，虽然黑苹果没有这个限制，可以改smbios机型安装big sur，但其实3代真不适合big sur，catalina也非常够用了 。
+
+    由于是3代ivy brige架构搭配6系芯片组，需要在apci里添加SSDT-IMEI.aml，否则可能会出现错误。如果是7系芯片组则不需要。
+
+    配置核显加速的AAPL,ig-platform-id为07002601，因为核显并不输出图像，所以只作为运算加速。
+
+    h61有些主板用的是比较冷门的sata控制器，所以SATA-unsupported.kext最好加上，
+
+    关于usb的驱动，其实一个USBInjectAll.kext就搞掂了。
+
+    另外，因为是免驱的nv显卡，引导参数记得加上nvda_drv_vrl=1，
+
+    机型可以选imacpro1,1，我这边选的是imac15,1，相差并不大。 
+    
+
 https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
 
 https://www.yuque.com/hejianzhao/zgnsc5/xnriw6
@@ -133,7 +134,7 @@ https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/
 https://www.zdynb.cn/2020/jie-suo-cfg-lock.html 解锁CFG Lock
 
 
-
+------------------------------------------------------------------------------------------
 
 ACPI--ADD
 
