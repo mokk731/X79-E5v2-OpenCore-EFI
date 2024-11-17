@@ -95,7 +95,8 @@ bios ： AMI uEFI
     Ivy Bridge 3XXX
     SDT-IMEI（6系主板才需要，例如H61主板、H67主板、P67主板、Z68主板）
 
-https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
+
+
 
 
 ------------------------------------------------------------------------------------------
@@ -125,6 +126,13 @@ https://dortania.github.io/OpenCore-Install-Guide/config.plist/ivy-bridge.html#a
 https://65536.io/2024/04/742.html 使用ControlMsrE2解锁BIOS的CFG Lock选项
 
     FS0: ControlMsrE2.efi unlock
+
+
+https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
+
+https://www.zdynb.cn/2020/jie-suo-cfg-lock.html 解锁CFG Lock
+
+
 
 
 ACPI--ADD
