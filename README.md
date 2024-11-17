@@ -153,8 +153,16 @@ DeviceProperties--Add
     例如，声卡ALC892，alcid=xxx参数，可以设置为alcid=1参数
 
 
- Kernel--Quirks
+
+
+ Kernel--Add    不用修改
  
+    ■ 加载顺序    像Lilu这样的kext必须先加载，后再加载VirtualSMC，AppleALC，WhateverGreen，使用ProperTree工具可自动完成
+    ■ 如果不想加载某个Kext，可以把Enabled设置为False
+
+    
+ Kernel--Quirks
+
     ■ AppleCpuPmCfgLock：YES    
       ● 如果在BIOS中禁用了CFG-Lock，则不需要
     ■ AppleXcpmCfgLock：YES    
@@ -180,8 +188,7 @@ DeviceProperties--Add
     ■ XhciPortLimit：YES
       ● 最好创建USB map映射
 
-    ■ Scheme
-      ● 旧版引导相关的设置（即10.4-10.6）忽略
+  
       
 
  Misc--Security    这项很重要，请不要跳过
@@ -210,6 +217,11 @@ DeviceProperties--Add
       ● 通常把这项删除
 
 
+ Misc--Tools
+ 
+    ■ 用于运行OC调试工具，例如shell，ProperTree的快照功能将为您添加这些内容，请您忽略
+
+
 NVRAM--Add
 
     7C436110-AB2A-4BBB-A880-FE41995C9F82 类型：Dictionary
@@ -223,6 +235,14 @@ NVRAM--Add
             这是debug= 0x100的辅助设置，它告诉OS还在内核崩溃时打印符号。这样可以对引起崩溃的原因提供更多有用的说明
         alcid=1
             用于设置AppleALC的layout-id，请参阅本页DeviceProperties—>PciRoot(0x0)/Pci(0x1b,0x0) 设置
+
+UEFI--Drivers
+
+    ■ 这里只需放入2个.efi驱动程序
+      ● HfsPlus.efi
+      ● OpenRuntime.efi
+
+      
 
     
 
