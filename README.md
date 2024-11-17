@@ -153,6 +153,32 @@ DeviceProperties--Add
     例如，声卡ALC892，alcid=xxx参数，可以设置为alcid=1参数
 
 
+ Misc--Security    这项很重要，请不要跳过
+ 
+    ■ AllowNvramReset：YES    类型：Boolean
+      ● 允许在启动选择器中以及按Ctrl+Alt+P+R
+    ■ AllowSetDefault：YES    类型：Boolean
+      ●  允许CTRL + Enter和CTRL + Index在选择器中设置默认启动设备
+    ■ ApECID: 0
+      ● 保留默认值
+    ■ AuthRestart：NO
+      ● 重启时不需要启用经过身份验证FileVault2密码
+    ■ BootProtect：Bootstrap
+      ● 允许在EFI / OC / Bootstrap中使用Bootstrap.efi代替BOOTx64.efi
+      ● 对于希望使用rEFInd引导或避免从Windows覆盖BOOTx64.efi的用户很有用
+    ■ DmgLoading：Signed
+      ● 确保仅限签名DMGs才加载
+    ■ ExposeSensitiveData：6
+      ● 显示更多的调试信息，需要OpenCore的调试版本
+    ■ Vault：Optional    类型：String
+      ● 务必设置为Optional，否则您会后悔
+      ● 请注意，区分大小写
+    ■ ScanPolicy：0    类型：Number
+    ■ SecureBootModel：Default    类型：String
+      ● 这是一个单词，区分大小写，如果您不希望安全启动，则设置为“ Disabled”（即，您需要Nvidia的Web驱动程序）
+      ● 通常把这项删除
+
+
 NVRAM--Add
 
     7C436110-AB2A-4BBB-A880-FE41995C9F82 类型：Dictionary
