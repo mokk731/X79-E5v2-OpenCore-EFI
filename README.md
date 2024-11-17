@@ -122,7 +122,9 @@ https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
 https://dortania.github.io/OpenCore-Install-Guide/config.plist/ivy-bridge.html#acpi
 
 
+https://65536.io/2024/04/742.html 使用ControlMsrE2解锁BIOS的CFG Lock选项
 
+    FS0: ControlMsrE2.efi unlock
 
 
 ACPI--ADD
