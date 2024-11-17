@@ -115,7 +115,7 @@ https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeo
 
 https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
 
-https://www.yuque.com/hejianzhao/zgnsc5/gnr881#
+https://www.yuque.com/hejianzhao/zgnsc5/xnriw6
 
 https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
    
@@ -152,6 +152,37 @@ DeviceProperties--Add
     在NVRAM——Add——7C436110-AB2A-4BBB-A880-FE41995C9F82——boot-args增加alcid=xxx参数，将覆盖存在的所有其他布局ID，请查看这里并确定您的声卡型号，然后找到对应的参数。https://github.com/acidanthera/AppleALC/wiki/Supported-codecs
     例如，声卡ALC892，alcid=xxx参数，可以设置为alcid=1参数
 
+
+ Kernel--Quirks
+ 
+    ■ AppleCpuPmCfgLock：YES    
+      ● 如果在BIOS中禁用了CFG-Lock，则不需要
+    ■ AppleXcpmCfgLock：YES    
+      ● 如果在BIOS中禁用了CFG-Lock，则不需要
+    ■ CustomSMBIOSGuid：NO    
+      ● 对UpdateSMBIOSMode自定义模式执行GUID修补。
+    ■ DisableIOMapper：YES    
+      ● 如果在BIOS中禁用了VT-D，则不需要，如果BIOS没有这一项就需要开启
+    ■ DisableLinkeditJettison：YES   
+      ● 允许Lilu和其他具有更可靠的性能，而无需keepsyms = 1
+    ■ DisableRtcChecksum：NO    
+      ● 适用于在重启/关机后收到BIOS重置或发送到安全模式的用户，阻止AppleRTC写入主校验和（0x58-0x59）
+    ■ ExtendBTFeatureFlags：NO
+      ● 对于非Apple / Fenvi卡连续性问题有帮助
+    ■ LapicKernelPanic：NO    
+      ● HP惠普机器需要YES设置
+    ■ LegacyCommpage：NO
+      ● 解决了macOS中对64位CPU的SSSE3要求，该要求主要与64位Pentium 4 CPU（即Prescott）有关
+    ■ PanicNoKextDump：YES
+      ● 允许在发生内核紧急情况时读取内核紧急情况日志
+    ■ PowerTimeoutKernelPanic：YES
+      ● 通过macOS Catalina中的Apple驱动程序（尤其是数字音频）帮助修复与电源更改有关的内核崩溃
+    ■ XhciPortLimit：YES
+      ● 最好创建USB map映射
+
+    ■ Scheme
+      ● 旧版引导相关的设置（即10.4-10.6）忽略
+      
 
  Misc--Security    这项很重要，请不要跳过
  
