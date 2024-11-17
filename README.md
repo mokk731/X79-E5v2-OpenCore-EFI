@@ -248,6 +248,8 @@ NVRAM--Add
             这是debug= 0x100的辅助设置，它告诉OS还在内核崩溃时打印符号。这样可以对引起崩溃的原因提供更多有用的说明
         alcid=1
             用于设置AppleALC的layout-id，请参阅本页DeviceProperties—>PciRoot(0x0)/Pci(0x1b,0x0) 设置
+        nvda_drv_vrl=1 
+            用于在Sierra和HighSierra的Maxwell和Pascal卡上启用Nvidia的Web驱动程序
 
 UEFI--Drivers
 
