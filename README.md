@@ -25,6 +25,7 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
+###vX79-H67-E5v2-my20241103.rar
 
 本项目在 [DmitriyyyyS/Asus-H67](https://github.com/DmitriyyyyS/Asus-H67) 基础上，优化改动。感谢DmitriyyyyS的无私分享。
 
@@ -47,6 +48,7 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
+### OpenCore_X79_X99_Xeon_E5_2650v2-nguyenphucdev.zip
 
 
 本项目在 [nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2](https://github.com/nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2) 基础上，优化改动,但进不了菜单，OC版本不兼容，只能用原版。感谢nguyenphucdev的无私分享。
