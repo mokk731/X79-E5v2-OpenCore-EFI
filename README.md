@@ -25,7 +25,7 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
-### X79-H67-E5v2-my20241103.rar
+### X79-H67-E5v2-DmitriyyyyS-my20241103.rar
 
 本项目在 [DmitriyyyyS/Asus-H67](https://github.com/DmitriyyyyS/Asus-H67) 基础上，优化改动。感谢DmitriyyyyS的无私分享。
 
