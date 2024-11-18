@@ -1,3 +1,7 @@
+
+
+
+E5 2660v2+X79+RX580 Monterey完美EFI  ---qq394140505
 https://bbs.pcbeta.com/viewthread-1946266-1-1.html
 配置：cpu：E5 2660v2
 主板：英特尔X79(p67芯片组) 应该是山寨主板
@@ -6,6 +10,51 @@ https://bbs.pcbeta.com/viewthread-1946266-1-1.html
 新的下载地址
 链接：https://pan.baidu.com/s/1hCnM2vwy_e585UEN6Urzow
 提取码：bxs8
+
+----------------------------------------------------------------------------------------
+
+ E5 2680v2+huanan X79-zd3安装11.6.8基本差不多了，抛砖引玉  ---yindan007
+https://bbs.pcbeta.com/viewthread-1945093-1-1.html
+硬件E5 2680v2+huanan X79-zd3+rx560+dell 1705无线网卡11.6.8
+
+
+思路与挫折：
+1.用老电脑装过很多之前的黑果版本，因为习惯了按支持黑果搭配硬件，所以都是简单用下别人做好的懒人包，替换下自带的oc配置文件或者找找别人的，很容易就搞定
+2.最近换了x79，从论坛，github等找了六七个efi，发现都连基本的安装都搞不定，装黑果最起码要先保证进系统
+3.辗转发现ocat这个软件，0.7.8版本的配置文件数据库有HEDT_X19_XXXXXXX_IvyBridge-E的配置文件，用它折腾了几次就安装成功了
+4.oc配置文件的修改偶尔用ocat会导致重新加载条目消失的问题，这时候要用propertree，用后者写配置从来没出过问题
+
+
+折腾过程：
+1.1 ocat-配置文件数据库，加载类似HEDT_X19_XXXXXXX_IvyBridge-E这个的
+1.2 ocat-升级oc和kexts-获取OpenCore
+1.3 ocat-升级oc和kexts-设置-kext升级网址-下载一些必要的kexts，具体哪些必要，自己搜索或者可以看我的附件碰下运气
+1.4 ocat-nvram-uuid最后一个有个boot-args，值改成-v keepsyms=1 npci=0x3000 【前两个参数貌似可以让屏幕输出一些信息，用来判断错误，还不会自动重启；npci这个有的可能是0x2000，貌似是没有intel核显要加的】
+2.1 bios设置 https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/ivy-bridge-e.html#intel-bios-settings 拉到最下面有哪些应该disable哪些应该enable的，有些关键参数bios没有的，可能要看这个页面的说明，勾选一些参数，bios有些bug也可能导致硬件驱动问题，这两个应该可以先不管
+2.2 最好上面那个文章也看一下，心里有个数，但是如果不懂最好先不要用它来指导修改ocat的配置文件
+3.1 镜像用的https://bbs.pcbeta.com/viewthread-1882132-1-1.html，macOS Big Sur 11.6.8 (20G730) Clover5148 and OC 0.8.3 and Win11PE.dmg，貌似帖子又升级了映像，我没测试只拿之前的版本说话。它的efi文件中默认config和ivy-bridge-e也是启动不了，但是可以作为参考
+4.1 用ocat生成的efi配置文件，替换到上面镜像中oc分区中的efi，然后重启进入
+4.2 大概率会报错，根据错误去论坛搜索提示最下面那一行，我的都是一些缺kext的错误，搜到后在ocat添加上，自带下载下载不下来的，按照它的链接找releases里找最新的
+4.3 成功启动到安装界面后，发现鼠标键盘不能用，之前那几个efi中，有的可以驱动几个usb，有的能全部驱动，我找到usb问题最少的acpi目录中的SSDT-USB-Reset.aml添加到我们的efi对应目录，再在ocat里添加一下就可以了。理由就是因为有usb这几个字母，随缘
+5.1 安装时，我先删除了osx-数据或者osx-data的分区，可能是之前安装错误自动生成的，再在osx分区上格式化成apfs，
+5.2 安装后可能会息屏，或者重启几次。我的电脑重启是坏的，只能晃动鼠标发现灯不亮了，强制断电再上电。
+6.1 进系统后配置完，添加了集成网卡驱动RealtekRTL8111.kext，无线网卡驱动AirPortAtheros40.kext，HS80211Family.kext，这些根据windows里的厂商和设备id可以搜索到型号，在用型号搜索加到黑果里要怎么做
+6.2 睿频用CPUFriend，自己搜教程，有的不全，注意要把CPUFriend.kext和针对自己电脑生成的CPUFriendDataProvider.kext都要放到对应目录中，cpu-s可以测试是否成功
+6.3 声卡是alc887，它的依赖是Lilu.kext，AppleALC.kext，可以在1.4的boot-args里加上 alcid=注入id 来驱动，这个注入id有个表可以查。需要注意的是，我的声卡，大部分id都可以让hackintool查到硬件，如果试了几个都没有，可能是有其他问题，我的就需要bios关闭above 4g decode。具体这个id，我挑了个使用后hackintool显示接口最多，接口带有未知二字最少的。
+7.1 要做内建网卡，具体参照ocat-dp里有built-in 值是01的，pcilists这个用hackintools找集成网卡是多少
+7.2 要在ocat-pi里设置串号什么，检查用来测试苹果数据库是否存在，存在的不能用，下面两个生成我也做了，不知道干啥的
+7.3 上面两个是用来登录apple账号的
+8.1 做完上面的我进clover按f4提取sdst和ssdt，只拿到带这两个名字的aml文件，然后用https://github.com/corpnewt/SSDTTime，根据命令窗口先选中基本的sdst？然后制作ssdt-hpet和ssdt-usb-reset，ssdt-ec我也做了下，都忘记为啥做了，反正不做也能用，做了也没出问题。新生成的文件放到acpi目录里，有相同的就替换掉,把同时生成的patch文件的内容按教程添加到ocat里。
+其他：
+1 hda硬件解码显示不支持：解决方法是把机型改为macpro7，1。会导致usb3.0插2.0设备没反应，我没处理。
+2 videoproc converter硬件加速不支持：用hackintools获取rx560的pcie-设备地址，添加到ocat-dp中，添加了一个slotname的参数，我加的是slot-1，具体搜论坛。需要注意的是，改好后在videoproc conberter添加硬件加速的那里要点下刷新，据说就算支持了，这个软件显示显卡也可能是n/a，但是我用potplayer播放了几个4k的hevc，显卡能占用50个百分点左右，之前基本是个位数。改后播放时处理器占用也不低，可能有200个百分点，不知道是不是正常。
+3 睡眠我不需要没折腾
+4 还有什么要折腾的我也不知道了
+5 上述内容大小写没注意，应用的执行权限大部分都要su权限，单纯打开软件或者执行bat，command是不行的
+
+----------------------------------------------------------------------------------------
+
+
 
 
 
