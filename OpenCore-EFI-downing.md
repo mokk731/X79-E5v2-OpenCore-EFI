@@ -1,1 +1,9 @@
-zz
+https://bbs.pcbeta.com/viewthread-1946266-1-1.html
+配置：cpu：E5 2660v2
+主板：英特尔X79(p67芯片组) 应该是山寨主板
+显卡：RX580 2304满血版
+网卡：AX200
+新的下载地址
+链接：https://pan.baidu.com/s/1hCnM2vwy_e585UEN6Urzow
+提取码：bxs8
+
