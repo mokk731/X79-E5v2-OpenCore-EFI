@@ -60,8 +60,9 @@ bios ： AMI uEFI
 
    用Hackintool瞎搞一通，有时重启后，能进入macos
 
-3， https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
+3， 有完整的ACPI:  SSDT-PM， SSDT-EC，SSDT-IMEI,SSDT-RTC0-RANGE
 
+    https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
     Ivy Bridge 3XXX
     SDT-IMEI（6系主板才需要，例如H61主板、H67主板、P67主板、Z68主板）
 
