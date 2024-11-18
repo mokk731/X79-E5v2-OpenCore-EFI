@@ -98,6 +98,11 @@ https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeo
 处理：     尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
 
 
+黑苹果安装到一半重启
+
+virtualsmc要加启动参数vsmcgen=1
+
+
 ------------------------------------------------------------------------------------------
 
 [3代老主机安装黑苹果catalina 10.15.7的思路](https://www.bilibili.com/read/cv13039059)
