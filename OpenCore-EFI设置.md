@@ -137,6 +137,10 @@ NVRAM--Add
         nvda_drv_vrl=1 
             用于在Sierra和HighSierra的Maxwell和Pascal卡上启用Nvidia的Web驱动程序
 
+PI
+
+      xeon W-3245M  macpro7.1
+
 UEFI--Drivers
 
     ■ 这里只需放入2个.efi驱动程序
