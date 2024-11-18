@@ -117,7 +117,7 @@ DeviceProperties--Add
  Misc--Tools
  
     ■ 用于运行OC调试工具，例如shell，ProperTree的快照功能将为您添加这些内容，请您忽略
-
+    OpenShell    ControlMsrE2
 
 NVRAM--Add
 
@@ -136,6 +136,7 @@ NVRAM--Add
             用于设置AppleALC的layout-id，请参阅本页DeviceProperties—>PciRoot(0x0)/Pci(0x1b,0x0) 设置
         nvda_drv_vrl=1 
             用于在Sierra和HighSierra的Maxwell和Pascal卡上启用Nvidia的Web驱动程序
+        启动参数vsmcgen=1
 
 PI
 
