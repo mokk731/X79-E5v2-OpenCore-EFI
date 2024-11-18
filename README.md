@@ -65,6 +65,27 @@ bios ： AMI uEFI
     Ivy Bridge 3XXX
     SDT-IMEI（6系主板才需要，例如H61主板、H67主板、P67主板、Z68主板）
 
+### 改动：
+
+    1，升级到 OpenCore  0.7.8
+    
+    2，修改：
+
+    DeviceProperties--Add
+    PciRoot(0x0)/Pci(0x16,0x0)
+
+    Kernel--Quirks
+    DisableLinkeditJettison：YES 
+
+    Misc--boot 
+    PickerMode:External
+
+    Misc--Security
+    SecureBootModel: Disabled
+
+    NVRAM--Add
+    boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 nvda_drv_vrl=1  alcid=1
+
 
 
 
