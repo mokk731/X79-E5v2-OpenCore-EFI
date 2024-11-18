@@ -123,6 +123,8 @@ NVRAM--Add
 
     7C436110-AB2A-4BBB-A880-FE41995C9F82 类型：Dictionary
 
+    boot-args:   -v debug=0x100 keepsyms=1 npci=0x2000 nvda_drv_vrl=1  alcid=1
+
     boot-args
         -v
             这将启用详细模式，该模式显示启动时滚动显示的所有幕后文本，而不是Apple徽标和进度条。对于任何Hackintosher来说，这都是无价之宝，因为它可以让您深入了解启动过程，并可以帮助您识别问题，问题扩展等
