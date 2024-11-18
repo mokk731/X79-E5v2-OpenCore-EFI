@@ -123,7 +123,7 @@ NVRAM--Add
 
     7C436110-AB2A-4BBB-A880-FE41995C9F82 类型：Dictionary
 
-    boot-args:   -v debug=0x100 keepsyms=1 npci=0x2000 nvda_drv_vrl=1  alcid=1
+    boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 nvda_drv_vrl=1  alcid=1
 
     boot-args
         -v
