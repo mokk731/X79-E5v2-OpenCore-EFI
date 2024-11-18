@@ -103,32 +103,32 @@ https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeo
 
 ------------------------------------------------------------------------------------------
 
-      出现跑码：   OC: Grabbed zero system-id for SB, this is not allowed
+出现跑码：   OC: Grabbed zero system-id for SB, this is not allowed
 
-处理：      设置Misc--Security--SecureBootModel--Disabled
+    处理： 设置Misc--Security--SecureBootModel--Disabled
 
 
 
 出现跑码：  Panic diags file unavailable, panic occurred prior to initialization
 
-处理：     尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
+    处理： 尝试1：更改kext加载顺序，更改后VirtualSMC.kext -> SMCSuperIO.kext -> SMCProcessor.kext，看看有没有效果。
 
 
 黑苹果安装到一半重启
 
-virtualsmc要加启动参数vsmcgen=1
+    virtualsmc要加启动参数vsmcgen=1
 
-FS0:
+FS3:
 ControlMsrE2.efi unlock
 
- nvda_drv_vrl=1 
+nvda_drv_vrl=1 
 
+Ivy Bridge  ACPI  
 
-Ivy Bridge     
-SSDT-PM 装好MacOS再装这个
-SSDT-EC
-SSDT-IMEI
-6系列主板的Ivy Bridge架构的CPU需要这个文件
+    SSDT-PM 装好MacOS再装这个
+    SSDT-EC
+    SSDT-IMEI
+    6系列主板的Ivy Bridge架构的CPU需要这个文件
 
 
 ------------------------------------------------------------------------------------------
