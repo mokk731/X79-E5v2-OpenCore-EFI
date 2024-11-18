@@ -7,14 +7,15 @@ https://geekdaxue.co/read/hejianzhao@zgnsc5/xnriw6
 https://dortania.github.io/OpenCore-Install-Guide/config.plist/ivy-bridge.html#acpi
 
 
+
+
+
 https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
 
 https://65536.io/2024/04/742.html 使用ControlMsrE2解锁BIOS的CFG Lock选项
 
     FS0: ControlMsrE2.efi unlock
 
-
-https://imacos.top/2019/07/22/1409/  小白也能看懂的入门教程DSDT/SSDT/ROM提取完整步骤编译拆分补丁除错实现笔记本电脑电池显示
 
 https://www.zdynb.cn/2020/jie-suo-cfg-lock.html 解锁CFG Lock
 
