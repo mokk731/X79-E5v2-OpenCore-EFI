@@ -68,6 +68,8 @@ https://blog.xjn819.com/post/opencore-guide.html
 
 ------------------------------------------------------------------------------------------
 
+### OpenCore
+
 ACPI--ADD
 
     SSDT-PM （可进入MacOS的再安装）
