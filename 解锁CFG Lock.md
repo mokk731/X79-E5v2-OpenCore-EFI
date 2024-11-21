@@ -7,6 +7,9 @@ https://65536.io/2024/04/742.html 使用ControlMsrE2解锁BIOS的CFG Lock选项
     FS1: ControlMsrE2.efi unlock
 
 
+
+### 提取CFG Lock 地址
+
 https://www.zdynb.cn/2020/jie-suo-cfg-lock.html 解锁CFG Lock
 
     下面是所有需要准备的工具：
@@ -46,5 +49,20 @@ https://www.zdynb.cn/2020/jie-suo-cfg-lock.html 解锁CFG Lock
     得到地址：
     VarStoreInfo (VarOffset/VarName): 0x11D, VarStore: 0x1, 
 
+----------------------------------------------------------------------------------------
+
+### modGRUBShell 解锁CFG Lock
+
+1, Download modGRUBShell and place it in the EFI/OC/Tools folder. Add it to the Misc → Tools section of config.plist.
+
+2, Boot into OpenCore and select the modGRUBShell option.
+
+3, Enter the following values:
+
+Disable CFG Lock:
+
+    setup_var 0x11D 0x0
+
+    实际：原0x1，改为0x0
     
     
