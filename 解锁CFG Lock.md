@@ -31,9 +31,20 @@ https://www.zdynb.cn/2020/jie-suo-cfg-lock.html 解锁CFG Lock
     使用UEFITool这个工具,选择File > Search（或Ctrl + F快捷键）弹出搜索框，点到GUID 项并在” Search scope”中勾选”Header only”，粘贴GUID:899407D799FE43D89A2179EC328CAC21（这段GUID其实就是BIOS中Setup项的特殊标识，因为不管CFG Lock、 
     BIOS Lock、DVMT还是Speed Shift都是在Setup下面的）。然后会出现这样的信息：
     GUID pattern “899407D7-99FE-43D8-9A21-79EC328CAC21” found as “D7079489FE99D8439A2179EC328CAC21” in Setup at header-offset 00h
-    双击这段信息，会自动将Setup 的位置找出来，这时需要在找到的Setup那里点右键，选择Extract as is… ，把提取的Setup模块（**.ffs或**.bin）保存到相应文件夹
+    双击这段信息，会自动将Setup 的位置找出来，这时需要在找到的Setup
+    
+    选择子项目：Setup--compressed section--minsetupresoucesection,
+    
+    那里点右键，选择Extract as is… ，把提取的Setup模块（**.sct或**.bin）保存到相应文件夹
 
     接下来，我们需要把该模块转换成我们能读懂的信息。我们需要借助IFRExtractor这个工具，直接点击右侧加载模块按钮，再点击Extract，转换模块为TXT文本，并保存到相应文件夹，
     
     寻找需要的偏移量
-    此时用文本工具打开，并查找CFG Lock即可看到如下信息：
+    此时用文本工具打开，并查找CFG 即可看到如下信息：
+    One Of: MMCFG BASE, VarStoreInfo (VarOffset/VarName): 0x11D, VarStore: 0x1, QuestionId: 0x29, Size: 1, Min: 0x0, Max 0x0, Step: 0x0 
+
+    得到地址：
+    VarStoreInfo (VarOffset/VarName): 0x11D, VarStore: 0x1, 
+
+    
+    
