@@ -19,7 +19,7 @@ https://dortania.github.io/OpenCore-Install-Guide/config.plist/ivy-bridge.html#a
 
 ------------------------------------------------------------------------------------------
 
-### OpenCore
+### OpenCore--OCAT
 
 ACPI--ADD
 
