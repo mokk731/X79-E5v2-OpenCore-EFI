@@ -93,11 +93,12 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
-### OpenCore_clover-x79-e5-2670-gtx650.zip
+### OpenCore-x79-e5-2670-gtx650-cheneyveron.zip
 
 https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
 
 一、macOS 11 Big Sur特别说明:
+
 注意：Big Sur的支持并不完善，建议先另分一个区安装测试，没问题后再升级。有修正想法的朋友们，欢迎PR。
 
 如果不需要升级Big Sur，请直接到Release下载旧版本EFI即可。
@@ -140,6 +141,7 @@ C310-C31F 映射 0x70-0x7F
 由于不推荐使用别人的dsdt，在此建议各位自行提取并修改DSDT。
 
 二、OpenCore 说明
+
 遵循OC的哲学，我会试图最小化改动来适应macOS。但是未必适合各位的主板。
 
 最小化的改动包含如下内容：
