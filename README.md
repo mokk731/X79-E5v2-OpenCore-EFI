@@ -97,6 +97,8 @@ bios ： AMI uEFI
 
 https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
 
+使用 OpenCore 0.6.4(2020-12-7)
+
 一、macOS 11 Big Sur特别说明:
 
 注意：Big Sur的支持并不完善，建议先另分一个区安装测试，没问题后再升级。有修正想法的朋友们，欢迎PR。
