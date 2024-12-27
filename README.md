@@ -93,6 +93,88 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
+### OpenCore_clover-x79-e5-2670-gtx650.zip
+
+https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
+
+一、macOS 11 Big Sur特别说明:
+注意：Big Sur的支持并不完善，建议先另分一个区安装测试，没问题后再升级。有修正想法的朋友们，欢迎PR。
+
+如果不需要升级Big Sur，请直接到Release下载旧版本EFI即可。
+
+1. DSDT改动
+由于寨板版型众多，此处列举的未必全面。请根据EFI/OC/ACPI/DSDT-SAMPLE.aml或者DSDT-SAMPLE2.aml对照修改自身DSDT。
+
+感谢 @szcxs 提供了示例DSDT。
+
+1) 三个变量的默认值修改：
+Name (BRL, 0xFF)
+Name (MBB, 0xCC000000)
+Name (MBL, 0x34000000)
+由于这三个变量初始值未必一致，所以请自行搜索BRL，MBB，MBL修改。
+
+2) Processor方法
+有些主板的第二个参数原本是统一的0x00，需要改成下面的：
+
+C000-C00F 映射 0x00-0x0F
+C010-C01F 映射 0x10-0x1F
+C100-C10F 映射 0x20-0x2F
+C110-C11F 映射 0x30-0x3F
+C200-C20F 映射 0x40-0x4F
+C210-C21F 映射 0x50-0x5F
+C300-C30F 映射 0x60-0x6F
+C310-C31F 映射 0x70-0x7F
+举例：
+
+映射前：Processor (C005, 0x00, 0x00000410, 0x06)
+
+映射后：Processor (C005, 0x05, 0x00000410, 0x06)
+
+注1：2.49版本的BIOS中已经修复了此问题。
+注2：DSDT Patch因主板而异。
+3) 屏蔽设备^UNC0
+直接删除，或者在它的_STA方法里返回(Zero)
+
+我未能用SSDT屏蔽该设备，请求对ACPI规范熟悉的朋友们的帮助。
+
+由于不推荐使用别人的dsdt，在此建议各位自行提取并修改DSDT。
+
+二、OpenCore 说明
+遵循OC的哲学，我会试图最小化改动来适应macOS。但是未必适合各位的主板。
+
+最小化的改动包含如下内容：
+
+1. ACPI部分
+加载按照上面说明修改过的DSDT.
+如果需要变频，则加载自己处理器的SSDT-1.aml. 如果不是2630L V2，请到attachments/SSDT-1中自行查找。
+2. Kernel部分
+Lilu.kext :用于注入其他驱动
+VirtualSMC.kext :模拟SMC。不使用它也可以将AppleSmcIo置为true
+VoodooTSCSync.kext :必须，否则卡第二阶段。修复CPU线程同步问题。
+WhateverGreen.kext :用于修复可能存在的显示问题
+AppleALC.kext :用于声音输出。也可以使用VoodooHDA代替。
+RealtekRTL8111.kext :有线网卡驱动
+USBMap.kext :USB端口映射文件。Big Sur下, USBInjectAll.kext未必能用，请使用这里的工具生成。
+CPUFriend.kext & CPUFriendDataProvider.kext :注入频率信息。
+3. UEFI/Drivers
+HfsPlus.efi :用于识别HFS+格式分区
+OpenRuntime.efi :OpenCore核心环境
+4. 其他Quirk
+AllowNvramReset: true。否则无法重置nvram。
+AllowSetDefault: true。否则无法使用Ctrl + 数字键设置默认系统。
+BootProtect: None。
+SecureBootModel: Disabled。
+Vault：Optional。以上三个关闭OC安全启动功能。
+boot-args：-v keepsyms=1 debug=0x100 npci=0x3000，必须添加npci=0x3000
+
+
+
+------------------------------------------------------------------------------------------
+
+
+
+
+
 优化改动目标：
 
 https://github.com/AwSomeSiz/Atermiter_X79G_Hackintosh   OpenCore 0.8.0  ,    X79G and Xeon E5-1650 v2   RX 570 4GB ,   用OpenCore 0.8.8，打开有错误
