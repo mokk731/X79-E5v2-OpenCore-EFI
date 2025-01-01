@@ -30,21 +30,41 @@ bios ： AMI uEFI
 本项目在 [DmitriyyyyS/Asus-H67](https://github.com/DmitriyyyyS/Asus-H67) 基础上，优化改动。感谢DmitriyyyyS的无私分享。
 
 
-1, 基于OpenCore  0.7.7
+    1, 基于OpenCore  0.7.7
 
-2, 增加了RTL8111网卡驱动，  
+    2, 增加了RTL8111网卡驱动，  
 
-3, 增加了Realtek ALC声卡驱动,alcid=1,ALC887 id要自己试，改动。
+    3, 增加了Realtek ALC声卡驱动,alcid=1,ALC887 id要自己试，改动。
                         
     0x100202, 0x100302, layout 1, 2, 3, 5, 7, 11, 13, 17, 18, 20, 33, 40, 50, 52, 53, 87, 99
 
-4, uefi-drivers-OpenUsbKbDxe.efi 改成false  。
+    4, uefi-drivers-OpenUsbKbDxe.efi 改成false  。
 
-5, 不管BIOS的 CFG Lock 是否已解锁， 都可以正常引导。
+    5, 不管BIOS的 CFG Lock 是否已解锁， 都可以正常引导。
 
-6,  MLB，SystemSerialNumber，SystemUUID 三码是原作者的，要重新改.
+    6,  MLB，SystemSerialNumber，SystemUUID 三码是原作者的，要重新改.
 
-7， 能进入安装菜单，但多次试安装macos,不成功。可能少了SDT-IMEI，，，，
+    7， 能进入安装菜单，但多次试安装macos,不成功。可能少了SDT-IMEI，，，，
+
+
+### X79-H67-E5v2-DmitriyyyyS20250101.zip
+
+    1, 升级OpenCore  0.7.8
+    2. ACPI--ADD 全删，换X79_E5_2650v2-nguyenphucdev 的
+    ３．Kernel--Add，　加入SMCSuperIO.kext.  VoodooTSCSync.kext
+    4. 三码空白
+    5. Kernel--Quirks  :
+       AppleCpuPmCfgLock：YES
+       AppleXcpmCfgLock：YES
+       DisableIOMapper：YES
+       DisableLinkeditJettison：YES
+       PanicNoKextDump：YES
+       PowerTimeoutKernelPanic：YES
+       XhciPortLimit：YES
+    6. SecureBootModel： Disabled
+    7. boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 alcid=1
+    8. 能进入安装菜单，但多次试安装macos,不成功
+
 
 ------------------------------------------------------------------------------------------
 
