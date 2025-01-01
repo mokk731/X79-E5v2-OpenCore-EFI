@@ -110,13 +110,16 @@ bios ： AMI uEFI
     boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 nvda_drv_vrl=1  alcid=1
 
 
- 能进入安装菜单，但多次试安装macos,不成功。安装到一半，就自动重启， 还没到选国家。
+    3. 能进入安装菜单，但多次试安装macos,不成功。安装到一半，就自动重启， 还没到选国家。
 
 
-### X79_E5_2650v2-nguyenphucdev20250101 小改动
+### X79_E5_2650v2-nguyenphucdev20250102.zip 小改动
     1. 停CPUFriend.kext， CPUFriendDataProvider.kext
     2. 三码空白
+    3. NVRAM--Add
+       boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 alcid=1
     
+    4. 能进入安装菜单，但多次试安装macos,不成功。安装到一半，就自动重启， 还没到选国家。
     
     
     
@@ -240,12 +243,12 @@ C310-C31F 映射 0x70-0x7F
 
 优化改动目标：
 
-https://github.com/AwSomeSiz/Atermiter_X79G_Hackintosh   OpenCore 0.8.0  ,    X79G and Xeon E5-1650 v2   RX 570 4GB ,   用OpenCore 0.8.8，打开有错误
+https://github.com/AwSomeSiz/Atermiter_X79G_Hackintosh   OpenCore 0.8.0  ,    X79G and Xeon E5-1650 v2   RX 570 4GB ,   用OpenCore ，打开有错误
 
-https://github.com/antipeth/EFI-Motherboard-X79-OpenCore-Hackintosh   ,   OpenCore 0.7.7   huanan-x79  E5-2450v2   HD 7750 1G  ,  用OpenCore 0.8.8，打开没错误, #####
+https://github.com/antipeth/EFI-Motherboard-X79-OpenCore-Hackintosh   ,   OpenCore 0.7.7   huanan-x79  E5-2450v2   HD 7750 1G  ,  用OpenCore ，打开没错误, #####
 
 
-https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeon 3270  GT 710 (Kepler)   ,用OpenCore 0.8.8，打开有错误, 改了可以通过， 能进入安装菜单，但多次试安装masos,不成功。可能少了SDT-IMEI  #####
+https://github.com/DmitriyyyyS/Asus-H67 , OpenCore  0.7.7 ，Asus-H67  Intel Xeon 3270  GT 710 (Kepler)   ,用OpenCore ，打开有错误, 改了可以通过， 能进入安装菜单，但多次试安装masos,不成功。可能少了SDT-IMEI  #####
 
 
 ------------------------------------------------------------------------------------------
