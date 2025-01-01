@@ -99,13 +99,26 @@ https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
 
 ### 改动：
 
-    1. 使用 OpenCore 0.6.4(2020-12-7)   iMacPro1,1    iMacPro1,1    Intel Xeon W-2140B CPU @ 3.20 GHz
+    1. 基于 OpenCore 0.6.4(2020-12-7)   iMacPro1,1    iMacPro1,1    Intel Xeon W-2140B CPU @ 3.20 GHz
 
-    2. 能进入选系统菜单，但不能进入安装菜单，
+    2. 原EFI,能进入选系统菜单，但不能进入安装菜单，
 
-    3. 升级OC0.7.8 ,瞎改动一通， 能进入安装菜单，但多次试安装macos,不成功
+    3. 升级OC0.7.8 ,瞎改动一通， 能进入安装菜单，但多次试安装macos,不成功. 安装到一半，就自动重启， 还没到选国家。
+    
+    4. UEFI--Drivers. 删除错误。
 
+    5. Kernel--Quirks  :
+       AppleCpuPmCfgLock：YES
+       AppleXcpmCfgLock：YES
+       DisableIOMapper：YES
+       DisableLinkeditJettison：YES
+       PanicNoKextDump：YES
+       PowerTimeoutKernelPanic：YES
+       XhciPortLimit：YES
 
+    6. PI : 三码改空白
+    
+  
 
 
 一、macOS 11 Big Sur特别说明:
