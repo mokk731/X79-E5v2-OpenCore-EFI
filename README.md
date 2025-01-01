@@ -93,9 +93,11 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
-### OpenCore-x79-e5-2670-gtx650-cheneyveron.zip
+### x79-e5-2670-gtx650-cheneyveron20250101.zip
 
-https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
+本项目在 [cheneyveron/clover-x79-e5-2670-gtx650](https://github.com/cheneyveron/clover-x79-e5-2670-gtx650) 基础上，优化改动。感谢cheneyveron的无私分享。
+
+
 
 ### 改动：
 
