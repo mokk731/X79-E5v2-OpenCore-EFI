@@ -99,7 +99,7 @@ https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
 
 ### 改动：
 
-    1. 使用 OpenCore 0.6.4(2020-12-7)
+    1. 使用 OpenCore 0.6.4(2020-12-7)   iMacPro1,1    iMacPro1,1    Intel Xeon W-2140B CPU @ 3.20 GHz
 
     2. 能进入选系统菜单，但不能进入安装菜单，
 
