@@ -48,7 +48,7 @@ bios ： AMI uEFI
 
 ------------------------------------------------------------------------------------------
 
-### OpenCore_X79_X99_Xeon_E5_2650v2-nguyenphucdev.zip
+### X79_E5_2650v2-nguyenphucdev-my20241118.rar
 
 
 本项目在 [nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2](https://github.com/nguyenphucdev/OpenCore_X79_X99_Xeon_E5_2650v2) 基础上，优化改动,但进不了菜单，OC版本不兼容，只能用原版。感谢nguyenphucdev的无私分享。
