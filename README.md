@@ -149,27 +149,33 @@ C310-C31F 映射 0x70-0x7F
 最小化的改动包含如下内容：
 
 1. ACPI部分
-加载按照上面说明修改过的DSDT.
-如果需要变频，则加载自己处理器的SSDT-1.aml. 如果不是2630L V2，请到attachments/SSDT-1中自行查找。
+
+        加载按照上面说明修改过的DSDT.
+        如果需要变频，则加载自己处理器的SSDT-1.aml. 如果不是2630L V2，请到attachments/SSDT-1中自行查找。
 2. Kernel部分
-Lilu.kext :用于注入其他驱动
-VirtualSMC.kext :模拟SMC。不使用它也可以将AppleSmcIo置为true
-VoodooTSCSync.kext :必须，否则卡第二阶段。修复CPU线程同步问题。
-WhateverGreen.kext :用于修复可能存在的显示问题
-AppleALC.kext :用于声音输出。也可以使用VoodooHDA代替。
-RealtekRTL8111.kext :有线网卡驱动
-USBMap.kext :USB端口映射文件。Big Sur下, USBInjectAll.kext未必能用，请使用这里的工具生成。
-CPUFriend.kext & CPUFriendDataProvider.kext :注入频率信息。
+ 
+        Lilu.kext :用于注入其他驱动
+        VirtualSMC.kext :模拟SMC。不使用它也可以将AppleSmcIo置为true
+        VoodooTSCSync.kext :必须，否则卡第二阶段。修复CPU线程同步问题。
+        WhateverGreen.kext :用于修复可能存在的显示问题
+        AppleALC.kext :用于声音输出。也可以使用VoodooHDA代替。
+        RealtekRTL8111.kext :有线网卡驱动
+        USBMap.kext :USB端口映射文件。Big Sur下, USBInjectAll.kext未必能用，请使用这里的工具生成。
+        CPUFriend.kext & CPUFriendDataProvider.kext :注入频率信息。
 3. UEFI/Drivers
-HfsPlus.efi :用于识别HFS+格式分区
-OpenRuntime.efi :OpenCore核心环境
+   
+        HfsPlus.efi :用于识别HFS+格式分区
+        OpenRuntime.efi :OpenCore核心环境
 4. 其他Quirk
-AllowNvramReset: true。否则无法重置nvram。
-AllowSetDefault: true。否则无法使用Ctrl + 数字键设置默认系统。
-BootProtect: None。
-SecureBootModel: Disabled。
-Vault：Optional。以上三个关闭OC安全启动功能。
-boot-args：-v keepsyms=1 debug=0x100 npci=0x3000，必须添加npci=0x3000
+   
+        AllowNvramReset: true。否则无法重置nvram。
+        AllowSetDefault: true。否则无法使用Ctrl + 数字键设置默认系统。
+        BootProtect: None。
+        SecureBootModel: Disabled。
+   
+5.Vault：Optional。以上三个关闭OC安全启动功能。
+
+6.boot-args：-v keepsyms=1 debug=0x100 npci=0x3000，必须添加npci=0x3000
 
 
 
