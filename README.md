@@ -173,9 +173,9 @@ C310-C31F 映射 0x70-0x7F
         BootProtect: None。
         SecureBootModel: Disabled。
    
-5.Vault：Optional。以上三个关闭OC安全启动功能。
+5. Vault：Optional。以上三个关闭OC安全启动功能。
 
-6.boot-args：-v keepsyms=1 debug=0x100 npci=0x3000，必须添加npci=0x3000
+6. boot-args：-v keepsyms=1 debug=0x100 npci=0x3000，必须添加npci=0x3000
 
 
 
