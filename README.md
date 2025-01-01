@@ -97,7 +97,14 @@ bios ： AMI uEFI
 
 https://github.com/cheneyveron/clover-x79-e5-2670-gtx650
 
-使用 OpenCore 0.6.4(2020-12-7)
+1. 使用 OpenCore 0.6.4(2020-12-7)
+
+2. 能进入选系统菜单，但不能进入安装菜单，
+
+3. 升级OC0.7.8 ,瞎改动一通， 能进入安装菜单，但多次试安装macos,不成功
+
+
+
 
 一、macOS 11 Big Sur特别说明:
 
