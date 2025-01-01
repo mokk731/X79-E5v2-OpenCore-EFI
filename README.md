@@ -52,8 +52,7 @@ bios ： AMI uEFI
     1, 升级OpenCore  0.7.8
     2. ACPI--ADD 全删，换X79_E5_2650v2-nguyenphucdev 的
     ３．Kernel--Add，　加入SMCSuperIO.kext.  VoodooTSCSync.kext
-    4. 三码空白
-    5. Kernel--Quirks  :
+    4. Kernel--Quirks  :
        AppleCpuPmCfgLock：YES
        AppleXcpmCfgLock：YES
        DisableIOMapper：YES
@@ -61,9 +60,10 @@ bios ： AMI uEFI
        PanicNoKextDump：YES
        PowerTimeoutKernelPanic：YES
        XhciPortLimit：YES
-    6. SecureBootModel： Disabled
-    7. boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 alcid=1
-    8. 能进入安装菜单，但多次试安装macos,不成功
+    5. SecureBootModel： Disabled
+    6. boot-args:   -v debug=0x100 keepsyms=1 npci=0x3000 alcid=1
+    7. 三码空白
+    8. 能进入安装菜单，但多次试安装macos,不成功,安装到一半，就自动重启， 还没到选国家。
 
 
 ------------------------------------------------------------------------------------------
