@@ -10,3 +10,12 @@ https://blog.xjn819.com/post/opencore-guide.html
 放入我从黑果小兵镜像包提取出来的EFI放进去。这是一个 clover 引导，但并不能引导你的系统，只能提取 DSDT。
 插上U盘，重启，通过U盘引导，看到Clover界面，我们按F4，这样原始的DSDT文件就收集好了。
 重新通过OC引导进入系统，我们打开U盘，EFI/Clover/ACPI/Orgin下，有我们的原始ACPI内容，我们只需要DSDT.aml这个就行了
+
+
+------------------------------------------------
+
+https://github.com/corpnewt/SSDTTime
+A simple tool designed to make creating SSDTs simple. Supports macOS, Linux and Windows
+
+https://www.bilibili.com/video/BV1tyr5YeEWt/
+黑苹果卡PCI？无法驱动声卡？使用SSDTTime制作SSDT
