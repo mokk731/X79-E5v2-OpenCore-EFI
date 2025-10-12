@@ -19,3 +19,7 @@ A simple tool designed to make creating SSDTs simple. Supports macOS, Linux and 
 
 https://www.bilibili.com/video/BV1tyr5YeEWt/
 黑苹果卡PCI？无法驱动声卡？使用SSDTTime制作SSDT
+
+
+------------------------------------------------
+
