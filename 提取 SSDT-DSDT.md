@@ -23,3 +23,10 @@ https://www.bilibili.com/video/BV1tyr5YeEWt/
 
 ------------------------------------------------
 
+## OpCore-Simplify
+
+https://github.com/lzhoang2801/OpCore-Simplify
+A tool designed to simplify the creation of OpenCore EFI
+
+https://imacos.top/2025/11/19/opcore-simplify/
+OpCore-Simplify 根据硬件自动化配置OpenCore EFI 工具
